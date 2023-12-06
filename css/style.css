@@ -22,20 +22,16 @@ ol {
   letter-spacing: 0.02em;
 }
 .container {
-  max-width: 1158px;
-  padding-left: 0;
-  padding-right: 0;
-  margin-left: 156px;
-  margin-right: 156px;
+  max-width: 320px;
+
   margin: 0 auto;
-  padding: 0 15px;
 }
 img {
   display: block;
 }
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .main-nav {
   display: flex;
@@ -108,11 +104,8 @@ img {
 .ul_link,
 .menu_list {
   list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
+
   color: #404bbf;
-  position: relative;
-  justify-content: center;
 }
 .main_li {
   margin-right: 40px;
@@ -121,18 +114,7 @@ img {
 .main_li:last-child {
   margin-right: 0;
 }
-.ul_link.solutions,
-.ul_link.team,
-.ul_link.portfolio {
-  gap: 24px;
-}
 
-.solutions li {
-  width: calc((100% - 72px) / 4);
-}
-.ul_link .team {
-  justify_content: center;
-}
 .ul_link .link,
 .menu_list .link {
   text-decoration: none;
@@ -157,6 +139,7 @@ header {
 
 .header_block {
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .menu_list .link:focus,
@@ -195,6 +178,7 @@ header {
   position: relative;
 }
 .main_title.title_main {
+  text-transform: capitalize;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
@@ -209,6 +193,8 @@ header {
   z-index: 999;
 }
 .solution_icon {
+  position: absolute;
+  visibility: hidden;
   row-gap: 24px;
   background-color: #f4f4fd;
   border: 1px solid #8e8f99;
@@ -218,7 +204,6 @@ header {
   justify-content: center;
   height: 112px;
   border-radius: 4px;
-  margin-bottom: 8px;
 }
 .icon {
   align-items: center;
@@ -227,7 +212,6 @@ header {
   row-gap: 48px;
 }
 .li_section_four {
-  width: calc((100% - 48px) / 3);
   position: relative;
   overflow: hidden;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -257,11 +241,11 @@ header {
 }
 
 .link_team.team_link {
-  width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 2px 1px 0px #2e2f4214;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  width: 264px;
 }
 
 .portfolios {
@@ -312,26 +296,40 @@ header {
 }
 
 .header_block {
-  font-size: 20px;
-  line-height: 1.2;
-  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.1;
+  font-weight: 700;
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
 .block {
   text-align: center;
 }
-.text {
-  font-weight: 400;
+.header_block.block {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin: 0;
 }
-.text.text_team {
+.text_div .header_block.block {
+  text-align: start;
+}
+
+.text_team {
   text-align: center;
   color: #434455;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 .header_section_text {
   font-size: 36px;
   line-height: 1.11;
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.02em;
   text-align: center;
   text-transform: capitalize;
@@ -373,9 +371,11 @@ header {
   color: #4d5ae5;
   display: inline-block;
   margin-bottom: 16px;
+  text-align: center;
 }
 .footer_style {
-  padding: 100px 0;
+  padding: 96px 0;
+  margin: 0 auto;
 }
 
 .text.footer {
@@ -421,6 +421,14 @@ header {
 }
 .text {
   color: #434455;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  margin-top: 8px;
+}
+.text.footer {
+  margin-top: 0;
 }
 .menu_list .link_a:not(.studio) {
   color: #2e2f42;
@@ -454,9 +462,6 @@ header {
   gap: 0;
 }
 .footer_form {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
   gap: 24px;
 }
 .label_email {
@@ -464,6 +469,7 @@ header {
   flex-direction: column;
 }
 .footer_email {
+  margin-bottom: 16px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 16px;
@@ -483,7 +489,6 @@ header {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .subscribe {
-  margin-bottom: 16px;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -740,4 +745,21 @@ header {
 }
 .icon_footer.button_icon_footer {
   margin-left: 16px;
+}
+.section,
+.ul_link.solutions,
+.ul_link.team,
+.ul_link.portfolio,
+.footer_container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+  max-width: 768px;
+  min-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin: 0 auto;
+  align-items: center;
+}
+@media() {
 }
